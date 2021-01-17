@@ -4,7 +4,7 @@ A GUI for the [lesspass.go](https://github.com/mevdschee/lesspass.go/) package (
 
 ![lesspass-gui screenshot](screenshot.png)
 
-The screenshot shows the official LessPass site widget (left) and this project (right) with the same output.
+The screenshot shows the official LessPass site widget (top) and this project (bottom) with the same output.
 
 see: https://lesspass.com
 

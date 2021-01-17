@@ -1,7 +1,9 @@
 package main
 
-import "github.com/andlabs/ui"
-import "github.com/mevdschee/lesspass.go/lesspass"
+import (
+	"github.com/andlabs/ui"
+	"github.com/mevdschee/lesspass.go/lesspass"
+)
 
 func main() {
 	err := ui.Main(func() {
@@ -11,6 +13,7 @@ func main() {
 		button := ui.NewButton("Generate")
 		password := ui.NewEntry()
 		box := ui.NewVerticalBox()
+		box.SetPadded(true)
 		box.Append(ui.NewLabel("Site"), false)
 		box.Append(site, false)
 		box.Append(ui.NewLabel("Login"), false)
@@ -19,7 +22,8 @@ func main() {
 		box.Append(masterPassword, false)
 		box.Append(button, false)
 		box.Append(password, false)
-		window := ui.NewWindow("LessPass GUI", 200, 100, false)
+		window := ui.NewWindow("LessPass GUI", 400, 100, false)
+		window.SetMargined(true)
 		window.SetChild(box)
 		button.OnClicked(func(*ui.Button) {
 			passwordProfile := lesspass.PasswordProfile{}

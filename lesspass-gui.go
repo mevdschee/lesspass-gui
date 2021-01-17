@@ -13,6 +13,7 @@ func main() {
 		button := ui.NewButton("Generate")
 		password := ui.NewEntry()
 		box := ui.NewVerticalBox()
+		password.SetReadOnly(true)
 		box.SetPadded(true)
 		box.Append(ui.NewLabel("Site"), false)
 		box.Append(site, false)
